@@ -16,6 +16,9 @@ header {
     text-align: center;
 }
 
+h2 {
+    margin: .1em;
+}
 /* hero section */
 
 #hero, footer {
@@ -35,6 +38,11 @@ header {
 }
 
 /* hobbies section */
+#Hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 #Hobbies ul li:nth-child(odd){
     color: turquoise;
@@ -94,4 +102,19 @@ box-shadow: 5px 5px black;
     border-top-left-radius: 10px;
     box-shadow: 5px 5px 5px rgb(0,0,0,.5);
     background-color: mediumorchid;
+}
+
+@media screen and (min-width: 60em) {
+figure {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+figcaption {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-left: 1rem;
+}
 }
