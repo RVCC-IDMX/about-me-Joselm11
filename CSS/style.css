@@ -27,6 +27,7 @@ h2 {
     padding: 10px;
     border: 4px solid #26ACFF;
     box-shadow: 5px 5px black;
+    max-width: 98%;
 }
 
 /* bio section */ 
@@ -104,6 +105,17 @@ box-shadow: 5px 5px black;
     background-color: mediumorchid;
 }
 
+#video {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#myVideo {
+    border-radius: 10px;
+    border: 5px solid gray;
+    margin-left: 3px;
+}
 
 /* tablet size */
 @media screen and (min-width: 60em) {
@@ -126,7 +138,23 @@ box-shadow: 5px 5px black;
 
     #lit div {
         max-width: 100%;
-        columns: 40rem;
+        columns: 30rem;
+    }
+    
+    #hero {
+        width: 100%;
+    }
+
+    #video {
+        display:grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    #video h2 {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-left: 1rem;
     }
 }
 
@@ -149,5 +177,9 @@ box-shadow: 5px 5px black;
 
     figure {
         display:block;
+    }
+    header {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
