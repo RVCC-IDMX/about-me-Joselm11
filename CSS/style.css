@@ -183,3 +183,9 @@ box-shadow: 5px 5px black;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+/*contact Form*/
+
+#formElements {
+    display: grid;
+}
