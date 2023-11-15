@@ -27,9 +27,12 @@ h2 {
     padding: 10px;
     border: 4px solid #26ACFF;
     box-shadow: 5px 5px black;
-    max-width: 98%;
+    max-width: 100%;
 }
 
+#hero img {
+    max-width: 100%;
+}
 /* bio section */ 
 
 #bio {
