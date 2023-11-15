@@ -33,6 +33,10 @@ h2 {
 #hero img {
     max-width: 100%;
 }
+
+footer {
+    margin: .5rem;
+}
 /* bio section */ 
 
 #bio {
