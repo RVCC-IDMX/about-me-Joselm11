@@ -1,6 +1,6 @@
 body {
     font-family: VT323;
-    background-color: #A66000;
+    background-color: #454545;
     color: #0BC3F4;
 }
 
@@ -41,7 +41,7 @@ footer {
 
 #bio {
     text-align: center;
-    background-color: #F2920C;
+    background-color: #292929;
     box-shadow: 5px 5px black;
 }
 
@@ -73,7 +73,7 @@ footer {
 
 #Hobbies ul li:nth-child(odd){
     color: turquoise;
-    border:6px solid #F2920C;
+    border:6px solid #E0B486;
     padding: 7px;
     box-shadow: 5px 5px black inset;
     margin:2px;
