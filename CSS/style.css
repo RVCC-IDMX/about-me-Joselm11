@@ -45,12 +45,23 @@ footer {
     box-shadow: 5px 5px 5px black;
 }
 
+@keyframes color {
+    0% {background-color: #0BC3F4; left: 0%;}
+    50% {background-color: purple; left: 95%;}
+}
+
 #square {
-    width: 20px;
-    height: 20px;
-    margin-bottom: 10px;
-    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
     background-color: #0BC3F4;
+    border: 1px solid black;
+    position: relative;
+    animation-name: color;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
 }
 
 /* hobbies section */
