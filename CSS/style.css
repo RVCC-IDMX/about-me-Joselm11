@@ -42,7 +42,7 @@ footer {
 #bio {
     text-align: center;
     background-color: #F2920C;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px black;
 }
 
 @keyframes color {
@@ -75,11 +75,15 @@ footer {
     color: turquoise;
     border:6px solid #F2920C;
     padding: 7px;
+    box-shadow: 5px 5px black inset;
+    margin:2px;
 }
 #Hobbies ul li:nth-child(even){
     padding: 10px;
     border:6px solid #0BC3F4;
     border-radius: 10px;
+    box-shadow: 5px 5px black;
+    margin:6px;
 }
 
 /* Gallery */
