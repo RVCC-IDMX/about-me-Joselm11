@@ -1,6 +1,6 @@
 body {
     font-family: VT323;
-    background-color: #A66000;
+    background-color: #454545;
     color: #0BC3F4;
 }
 
@@ -19,6 +19,7 @@ header {
 h2 {
     margin: .1em;
 }
+
 /* hero section */
 
 #hero, footer {
@@ -41,8 +42,27 @@ footer {
 
 #bio {
     text-align: center;
-    background-color: #F2920C;
-    box-shadow: 5px 5px 5px black;
+    background-color: #292929;
+    box-shadow: 5px 5px black;
+}
+
+@keyframes color {
+    0% {background-color: #0BC3F4; left: 0%;}
+    50% {background-color: purple; left: 95%;}
+}
+
+#square {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    background-color: #0BC3F4;
+    border: 1px solid black;
+    position: relative;
+    animation-name: color;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction: reverse;
 }
 
 /* hobbies section */
@@ -54,13 +74,17 @@ footer {
 
 #Hobbies ul li:nth-child(odd){
     color: turquoise;
-    border:6px solid #F2920C;
+    border:6px solid #E0B486;
     padding: 7px;
+    box-shadow: 5px 5px black inset;
+    margin:2px;
 }
 #Hobbies ul li:nth-child(even){
     padding: 10px;
     border:6px solid #0BC3F4;
     border-radius: 10px;
+    box-shadow: 5px 5px black;
+    margin:6px;
 }
 
 /* Gallery */
