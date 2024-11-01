@@ -1,10 +1,39 @@
+/* Global Settings */
+/* Base Styles - Add these right after body styles */
+body, header, #hero, #bio, footer, main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar and Main Sections */
+.navbar, #hero, #bio, #gallery, #lit, footer {
+    width: 100%;
+    margin: 0 auto; /* Center-align and avoid any side gaps */
+    box-sizing: border-box; /* Ensure padding/border do not cause overflow */
+}
+
+/* Existing styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: VT323;
+    background-color: #454545;
+    color: #0BC3F4;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: VT323;
     background-color: #454545;
     color: #0BC3F4;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: Pixelify Sans;
     text-align: center;
 }
@@ -12,16 +41,12 @@ h1 {
     font-size: 40pt;
 }
 
+/* Centered header */
 header {
     text-align: center;
 }
 
-h2 {
-    margin: .1em;
-}
-
-/* hero section */
-
+/* Hero Section */
 #hero, footer {
     text-align: center;
     background-color: #0468A6;
@@ -29,6 +54,7 @@ h2 {
     border: 4px solid #26ACFF;
     box-shadow: 5px 5px black;
     max-width: 100%;
+    overflow: hidden;
 }
 
 #hero img {
@@ -36,19 +62,20 @@ h2 {
 }
 
 footer {
-    margin: .5rem;
+    margin: 0.5rem;
 }
-/* bio section */ 
 
+/* Bio Section */
 #bio {
     text-align: center;
     background-color: #292929;
     box-shadow: 5px 5px black;
 }
 
+/* Color Animation */
 @keyframes color {
-    0% {background-color: #0BC3F4; left: 0%;}
-    50% {background-color: purple; left: 95%;}
+    0% { background-color: #0BC3F4; left: 0%; }
+    50% { background-color: purple; left: 95%; }
 }
 
 #square {
@@ -62,56 +89,64 @@ footer {
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in;
-    animation-direction: reverse;
+    animation-direction: alternate;
 }
 
-/* hobbies section */
+/* Hobbies Section */
 #Hobbies {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#Hobbies ul li:nth-child(odd){
-    color: turquoise;
-    border:6px solid #E0B486;
-    padding: 7px;
-    box-shadow: 5px 5px black inset;
-    margin:2px;
+#Hobbies ul li {
+    align-self: stretch;
 }
-#Hobbies ul li:nth-child(even){
-    padding: 10px;
-    border:6px solid #0BC3F4;
+
+#Hobbies ul li:nth-child(odd) {
+    color: turquoise;
+    border: 6px solid #E0B486;
+    padding: 1px;
+    box-shadow: 5px 5px black inset;
+    margin: 1px;
+}
+
+#Hobbies ul li:nth-child(even) {
+    padding: 5px;
+    border: 6px solid #0BC3F4;
     border-radius: 10px;
     box-shadow: 5px 5px black;
-    margin:6px;
+    margin: 1px;
 }
 
 /* Gallery */
-
-#gallery {
+#gallery img{
     border: 4px solid #26ACFF;
     margin-bottom: 2rem;
     border-bottom-right-radius: 8px;
     border-top-left-radius: 8px;
     box-shadow: 5px 5px black;
+    margin: 0;
 }
 
-#gallery img {
-    max-width: 100%;
+#gallery {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0;
 }
 
-#gallery figure {
-    text-align: center;
+#gallery figure{
+    margin: 0;
+    padding: 0;
 }
 
-/* literature */
-
+/* Literature Section */
 #lit {
-border:4px solid #26ACFF;
-margin-bottom: 2rem;
-border-radius: 8px;
-box-shadow: 5px 5px black;
+    border: 4px solid #26ACFF;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 5px 5px black;
 }
 
 #lit div {
@@ -120,106 +155,33 @@ box-shadow: 5px 5px black;
     margin: 0 auto;
 }
 
-/* dropcaps */
-
+/* Dropcaps */
 #lit div p:first-child::first-letter {
     color: powderblue;
     font-size: 3rem;
     float: left;
     padding: 1rem;
-    line-height: .65;
-    border:1px solid cyan ;
+    line-height: 0.65;
+    border: 1px solid cyan;
     margin-right: 1rem;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
-    box-shadow: 5px 5px 5px rgb(0,0,0,.5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     background-color: mediumorchid;
 }
 
+/* Video Section */
 #video {
     display: grid;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
 }
-#myVideo {
-    border-radius: 10px;
-    border: 5px solid gray;
-    margin-left: 3px;
-}
 
-/* tablet size */
-@media screen and (min-width: 60rem) {
-    figure {
-        display:grid;
-        grid-template-columns: 2fr 1fr;
-    }
-
-    figcaption {
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        margin-left: 1rem;
-    }
-
-    figure img {
-        width: 100%;
-    }
-
-    #lit div {
-        max-width: 100%;
-        columns: 30rem;
-    }
-    
-    #hero {
-        max-width: 100%;
-    }
-
-    #video {
-        display:grid;
-        grid-template-columns: 2fr 1fr;
-    }
-    #video h2 {
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 2rem;
-        margin-left: 1rem;
-    }
-}
-
-/* large screen size */
-
-@media screen and (min-width: 100rem) {
-    #gallery {
-        display:grid;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-    
-
-    hr {
-        display: none;
-    }
-
-    #gallery h2 {
-        grid-column:1/-1;
-    }
-
-    figure {
-        display:block;
-    }
-    header {
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-/*contact Form*/
-
+/* Contact Form */
 #formElements {
     display: grid;
-    row-gap: .5em;
+    row-gap: 0.5em;
 }
 
 #contact {
@@ -230,8 +192,7 @@ box-shadow: 5px 5px black;
 
 fieldset {
     border: 2px solid #26ACFF;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
     border-radius: 2rem;
     box-shadow: 5px 8px 15px black inset;
 }
@@ -239,23 +200,13 @@ fieldset {
 legend {
     background-color: #26ACFF;
     color: white;
-    padding: .5em;
+    padding: 0.5em;
     box-shadow: 10px 5px 10px #0468A6;
 }
 
 #contact input, #contact textarea, #contact select, #contact button {
-    padding: .5em;
+    padding: 0.5em;
     font-size: 1rem;
-}
-
-
-#contact ul {
-    list-style: none;
-    padding: 0px;
-}
-
-#contact li {
-    margin:1rem;
 }
 
 #contact button {
@@ -263,7 +214,31 @@ legend {
     color: white;
     border: 1px solid #0468A6;
     filter: drop-shadow(0 0 0.75rem #0468A6);
-    max-width:400px;
+    max-width: 400px;
     width: 50%;
     justify-self: center;
+    cursor: pointer;
+}
+
+/* Media Queries for Tablet and Large Screen Sizes */
+@media screen and (min-width: 60rem) {
+    figure, #video {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+    #gallery {
+        grid-template-columns: repeat(3, 1fr); /* Adjust columns */
+    }
+}
+
+@media screen and (min-width: 100rem) {
+    #gallery {
+        grid-template-columns: repeat(4, 1fr); /* More columns */
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
