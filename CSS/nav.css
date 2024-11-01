@@ -18,7 +18,7 @@ body {
 /* add some padding back to rest of page */
 
 main {
-    padding: 2vw;
+    margin-top: 15px;
 }
 
 /* navbar */
@@ -27,12 +27,13 @@ main {
     background-color: #0468A6;
     color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically on small screens */
     font-size: 1.9rem;
-    margin: .5rem;
-    padding: 1rem;
+    margin: 0; /* Remove any margin */
+    padding: 1rem; /* Adjust this for spacing */
     box-shadow: 5px 5px black;
     border: 4px solid #26ACFF;
+    width: 100%; /* Ensure full width */
 }
 
 /* logo */
@@ -87,14 +88,17 @@ main {
 
 @media screen and (min-width: 60rem) {
     .navbar {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0.5rem 1rem;
+        flex-direction: row; /* Arrange items horizontally */
+        justify-content: space-between; /* Space out items evenly */
+        width: 100%; /* Ensure it remains full width */
+        padding: 1rem; /* Maintain padding for spacing */
     }
 
     .navbar ul {
         display: flex;
-        gap: 1rem;
-        align-items: center;
+        justify-content: space-between;
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        width: 100%; /* Make sure it stretches across */
     }
 }

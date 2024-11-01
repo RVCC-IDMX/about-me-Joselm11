@@ -44,6 +44,9 @@ h1 {
 /* Centered header */
 header {
     text-align: center;
+    margin: 0; /* Ensure header has no margin */
+    padding: 0; /* Ensure no padding */
+    width: 100%; /* Ensure it spans the full width */
 }
 
 /* Hero Section */
@@ -59,6 +62,7 @@ header {
 
 #hero img {
     max-width: 100%;
+    height:auto;
 }
 
 footer {
@@ -238,7 +242,6 @@ legend {
     }
     
     header {
-        display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
